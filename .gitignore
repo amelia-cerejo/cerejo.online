@@ -1,0 +1,9 @@
+.netlify/
+node_modules/
+.env
+.env.*
+!.env.example
+tmp/
+*.log
+Thumbs.db
+.DS_Store

@@ -1,0 +1,43 @@
+.training-content { box-sizing: border-box; width: 100%; max-width: 1040px; margin: auto; padding: 150px clamp(40px, 10vw, 120px) 80px clamp(64px, 15vw, 180px); }
+.review-note { padding: 14px 18px; background: #fff5dc; border-left: 3px solid #ae7727; font-size: 14px; line-height: 1.6; }
+.training-content section { padding: 40px 0; border-bottom: 1px solid #ddd; }
+.training-content .training-intro { padding-top: 48px; }
+.training-content h1 { max-width: 700px; font-size: clamp(36px, 6vw, 62px); line-height: 1.12; margin: 20px 0; }
+.training-content h2 { font-size: clamp(24px, 4vw, 32px); }
+.training-content p { max-width: 760px; line-height: 1.8; }
+.training-content .intro-text { font-size: 21px; }
+.training-content .button { display: inline-block; margin-top: 18px; }
+.pending { padding: 20px; background: white; border: 1px solid #ddd; }
+.contact-email { display: inline-block; font-size: clamp(18px, 4vw, 26px); overflow-wrap: anywhere; }
+.training-footer { padding: 24px; text-align: center; font-size: 14px; }
+.review-note { background: transparent; border: 0; border-bottom: 1px solid #eee; padding: 12px 0; color: #717171; }
+.training-content .training-intro { padding-top: 24px; }
+.training-content .prt_heading { max-width: 100%; }
+.training-content .prt_heading h1 { font-size: clamp(26px, 4vw, 40px); margin: 0; line-height: 1.2; }
+.training-content .prt_heading p { line-height: 1.5; font-size: 13px; }
+.training-content .intro-text { font-size: 17px; }
+.training-content h2 { font-size: 28px; text-transform: uppercase; font-weight: 400; }
+.eyebrow { color: #f6483b; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
+.pending { padding: 15px 0; border: 0; }
+.training-content .prt_btn { margin-top: 20px; }
+@media (max-width: 600px) {
+    .training-content { padding: 110px 28px 60px; }
+    .prt_logo_wrapper img { left: 24px; top: 25px; }
+    .prt_close_wrapper img { right: 24px; top: 25px; }
+}
+.training-areas { padding-left: 20px; line-height: 1.9; }
+.training-areas li { margin-bottom: 16px; }
+.training-resources { list-style: none; padding: 0; margin: 24px 0 0 clamp(18px, 3vw, 32px); }
+.training-resources li { border-bottom: 1px solid #eee; }
+.training-resources a { display: block; padding: 18px 0; color: #202020; line-height: 1.7; }
+.training-resources a span { display: block; color: #717171; font-size: 13px; }
+.training-resources a:hover, .training-resources a:hover span { color: #f6483b; }
+
+.resource-area { margin: 36px 0 0; font-size: 21px; line-height: 1.5; color: #202020; border-left: 3px solid #f6483b; padding-left: 14px; }
+
+.training-resources li { padding: 18px 0; }
+.resource-title { display: block; color: #202020; line-height: 1.7; }
+.resource-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 5px; }
+.training-resources .resource-links a { padding: 0; font-size: 13px; color: #717171; }
+.training-resources .resource-links a:first-child { color: #f6483b; }
+.training-resources .resource-links a:hover { text-decoration: underline; }
