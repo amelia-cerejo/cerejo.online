@@ -17,31 +17,14 @@
     }
     subject.addEventListener('change', updateOtherSubject);
     updateOtherSubject();
-    form.addEventListener('submit', async function (event) {
+    form.addEventListener('submit', function (event) {
         event.preventDefault();
-        var status = form.querySelector('.contact-response');
-        var button = form.querySelector('button');
-        if (window.location.protocol === 'file:' || ['localhost', '127.0.0.1', '[::1]'].indexOf(window.location.hostname) !== -1) {
-            status.textContent = 'Pré-visualização local: o envio estará disponível quando o formulário estiver configurado no alojamento. Contacto: info@cerejo.online.';
-            return;
-        }
-        button.disabled = true;
-        status.textContent = 'A enviar…';
-        try {
-            var data = new FormData(form);
-            var response = await fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(data).toString()
-            });
-            if (!response.ok) throw new Error('Falha no envio');
-            status.textContent = 'Mensagem enviada. Obrigada pelo seu contacto.';
-            form.reset();
-            updateOtherSubject();
-        } catch (error) {
-            status.textContent = 'Não foi possível enviar. Contacte diretamente info@cerejo.online.';
-        } finally {
-            button.disabled = false;
-        }
+        if (!form.reportValidity()) return;
+        var data = new FormData(form);
+        var selectedSubject = subject.value === 'Outro assunto' ? otherInput.value.trim() : subject.value;
+        var body = 'Nome: ' + data.get('full_name') + '\r\nEmail: ' + data.get('email') + '\r\n\r\n' + data.get('message');
+        var mailto = 'mailto:amelia@cerejo.online?subject=' + encodeURIComponent(selectedSubject) + '&body=' + encodeURIComponent(body);
+        form.querySelector('.contact-response').textContent = 'A mensagem será aberta no seu programa de email. Reveja-a e clique em Enviar nesse programa. Se não abrir, contacte amelia@cerejo.online.';
+        window.location.href = mailto;
     });
 })();
