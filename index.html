@@ -298,8 +298,17 @@ Purchase: http://themeforest.net/user/kamleshyadav
 							<h1 id="hire">  Contacte-me</h1>
 							<!-- <h1 id="hire">  How we can help you ?</h1> -->
 							<div class="prt_contact_form">
-<iframe class="contact-app-frame" src="https://script.google.com/macros/s/AKfycbwvycloRbtoYajAzx1hNY5wqwa4Pcsj8IB840f-1QiHJD6I2WOkMnsSV1j5HyW9q24Q/exec" title="Formulário de contacto de Amélia Cerejo Lopes"></iframe>
-<p class="contact-app-fallback">Se o formulário não aparecer, <a href="https://script.google.com/macros/s/AKfycbwvycloRbtoYajAzx1hNY5wqwa4Pcsj8IB840f-1QiHJD6I2WOkMnsSV1j5HyW9q24Q/exec" target="_blank" rel="noopener">abra-o numa nova janela</a> ou contacte <a href="mailto:amelia@cerejo.online">amelia@cerejo.online</a>.</p></div>
+<form id="professional-contact">
+<label for="contact-name">Nome</label><input id="contact-name" name="nome" autocomplete="name" maxlength="120" required>
+<label for="contact-email">Email</label><input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+<label for="contact-subject">Assunto</label><select id="contact-subject" name="assunto" required>
+<option value="" disabled selected>Selecione um assunto</option><option>Informações sobre formação</option><option>Proposta de colaboração</option><option>Materiais e recursos pedagógicos</option><option>Outro assunto</option></select>
+<div id="other-subject-field" hidden><label for="contact-other-subject">Indique o assunto</label><input id="contact-other-subject" name="outro" maxlength="180" disabled></div>
+<label for="contact-message">Mensagem</label><textarea id="contact-message" name="mensagem" rows="5" maxlength="10000" required></textarea>
+<div hidden><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<p>Os dados serão utilizados para responder ao seu contacto, através do Google Apps Script, com destino a amelia@cerejo.online.</p>
+<button type="submit" class="prt_btn">Enviar mensagem</button><p class="contact-response" role="status" aria-live="polite"></p>
+</form></div>
 						</div>
 					</div>
 					<div class="col-12">
