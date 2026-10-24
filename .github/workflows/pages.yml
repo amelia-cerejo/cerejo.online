@@ -24,6 +24,7 @@ jobs:
           mkdir _site
           cp *.html *.pdf _site/
           cp -R css fonts images js _site/
+          cp -R documentos _site/
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
