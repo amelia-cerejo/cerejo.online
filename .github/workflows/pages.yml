@@ -18,13 +18,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Obter trabalhos académicos do e-portfólio
+        uses: actions/checkout@v4
+        with:
+          repository: amelia-cerejo/e-portfolio.cerejo.online
+          ref: main
+          path: _academic-source
       - uses: actions/configure-pages@v5
       - name: Preparar ficheiros públicos
         run: |
           mkdir _site
           cp *.html *.pdf _site/
           cp -R css fonts images js _site/
-          cp -R documentos _site/
+          cp -R _academic-source/trabalhos-academicos/. _site/
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
